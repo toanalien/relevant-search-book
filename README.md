@@ -17,7 +17,14 @@ Examples for this book are written in Python 2.7 and use iPython notebook. The f
 
 The examples expect Elasticsearch to be hosted at localhost:9200. So you'll need to install Elasticsearch to work with the examples. There's two ways to install Elasticsearch
 
-### Recommended: Vagrant
+
+### Recommended: Docker Way
+
+   ```
+   docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.4.0
+   ```
+  
+### Vagrant Way
 
 Vagrant is a tool for installing and provisioning virtual machines locally for development purposes. If you've never used vagrant, you can follow the installation instructions [here](https://docs.vagrantup.com/v2/installation/). OpenSource Connections maintains a basic Elasticsearch vagrant box [here](https://github.com/o19s/elasticsearch-vagrant).
 
